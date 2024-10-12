@@ -7,18 +7,21 @@ class BookingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Spring Service'),
-        automaticallyImplyLeading: false,
-      ),
       body: const Text('Bookings'),
       floatingActionButton: FloatingActionButton(
+        mini: true,
+        shape: const CircleBorder(),
+        backgroundColor: const Color(0xff17376B),
         onPressed: () {
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (BuildContext context) {
             return const CreateBooking();
           }));
         },
+        child: const Icon(
+          Icons.add,
+          color: Color(0xffffffff),
+        ),
       ),
     );
   }

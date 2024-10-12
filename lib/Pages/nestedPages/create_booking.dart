@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spring_service/Pages/home_page.dart';
 
 class CreateBooking extends StatefulWidget {
   const CreateBooking({super.key});
@@ -15,13 +14,29 @@ class _CreateBookingState extends State<CreateBooking> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Create Booking'),
+        backgroundColor: const Color(0xff17376B),
+        title: const Text(
+          'Create Booking',
+          style: TextStyle(
+            fontSize: 16,
+            color: Colors.white,
+          ),
+        ),
         automaticallyImplyLeading: false,
         leading: IconButton(
           onPressed: () {
             Navigator.of(context).pop();
           },
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+            size: 16,
+          ),
+        ),
+      ),
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [],
         ),
       ),
     );

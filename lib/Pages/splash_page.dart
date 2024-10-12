@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:spring_service/Pages/home_page.dart';
 import 'package:spring_service/layouts/user_pages.dart';
 
 class SplashPage extends StatefulWidget {
@@ -29,8 +28,8 @@ class _SplashPageState extends State<SplashPage> {
       backgroundColor: const Color(0xff17376B),
       body: Center(
         child: SizedBox(
-          width: 90, // Set the desired width
-          height: 90, // Set the desired height
+          width: 90,
+          height: 90,
           child: Image.asset('assets/preview.jpg'),
         ),
       ),
