@@ -15,8 +15,20 @@ class MyApp extends StatelessWidget {
       // title: 'Spring Service',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          fontFamily: 'Poppins',
+          primarySwatch: Colors.blue,
+          primaryColor: Color(0xff17376B),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Color(0xff17376B),
+            primary: Color(0xff17376B),
+            secondary: Colors.orange,
+          ),
+          textTheme: TextTheme(
+            bodyLarge: TextStyle(fontSize: 16.0),
+            bodyMedium: TextStyle(fontSize: 14.0),
+            bodySmall: TextStyle(fontSize: 12.0),
+            titleLarge: TextStyle(fontSize: 18.0),
+          )),
       home: const SplashPage(),
     );
   }

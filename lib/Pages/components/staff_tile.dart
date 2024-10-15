@@ -1,27 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:spring_service/Pages/components/user_avatar.dart';
+import 'package:spring_service/models/staff_model.dart';
 
 class StaffTile extends StatelessWidget {
-  final String circleAvatarUrl;
-  final String name;
-  final String service;
-  final double rating;
-  final double charge;
+  final StaffModel staffModel;
 
   const StaffTile({
     super.key,
-    required this.circleAvatarUrl,
-    required this.name,
-    required this.service,
-    required this.rating,
-    required this.charge,
+    required this.staffModel,
   });
 
   @override
   Widget build(BuildContext context) {
     return Row(children: [
       UserAvatar(
-        circleAvatarUrl: circleAvatarUrl,
+        circleAvatarUrl: staffModel.circleAvatarUrl,
         avatarRadius: 20,
       ),
       const SizedBox(
@@ -31,14 +24,14 @@ class StaffTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            name,
+            staffModel.name,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 14,
             ),
           ),
           Text(
-            service,
+            staffModel.service,
             style: const TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 12,
@@ -52,7 +45,7 @@ class StaffTile extends StatelessWidget {
                 size: 16,
               ),
               Text(
-                rating.toStringAsFixed(1),
+                staffModel.rating.toStringAsFixed(1),
                 style: const TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 12,
@@ -66,7 +59,7 @@ class StaffTile extends StatelessWidget {
         flex: 1,
       ),
       Text(
-        '\$${charge.toStringAsFixed(2)}/hr',
+        '\$${staffModel.charge.toStringAsFixed(2)}/hr',
         style: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.bold,

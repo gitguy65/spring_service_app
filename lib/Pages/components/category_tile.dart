@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:spring_service/Pages/components/user_avatar.dart';
+import 'package:spring_service/models/category_model.dart';
 
-class ServiceTile extends StatelessWidget {
-  final String categoryImageUrl;
-  final double categoryImageRadius;
-  final String categoryName;
+class CategoryTile extends StatelessWidget {
+  final CategoryModel categoryModel;
 
-  const ServiceTile({
+  const CategoryTile({
     super.key,
-    required this.categoryImageUrl,
-    required this.categoryImageRadius,
-    required this.categoryName,
+    required this.categoryModel,
   });
 
   @override
@@ -18,11 +15,11 @@ class ServiceTile extends StatelessWidget {
     return Column(
       children: [
         UserAvatar(
-          circleAvatarUrl: categoryImageUrl,
-          avatarRadius: categoryImageRadius.toInt(),
+          circleAvatarUrl: categoryModel.categoryImageUrl,
+          avatarRadius: categoryModel.categoryImageRadius.toInt(),
         ),
         Text(
-          categoryName,
+          categoryModel.categoryName,
           style: const TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 14,

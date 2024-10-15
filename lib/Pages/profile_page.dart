@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:spring_service/Pages/components/service_tile.dart';
 
 class ProfilePage extends StatelessWidget {
-  final List serviceCategory = [
-    ['avatar', 'Plumbing'],
-    ['avatar', 'Laundry'],
-    ['avatar', 'Handyman'],
-    ['avatar', 'Gardening'],
-    ['avatar', 'Gardening'],
-    ['avatar', 'Gardening'],
-  ];
-
   ProfilePage({super.key});
+
+  final List serviceCategory = [
+    ['https://randomuser.me/api/portraits/med/men/5.jpg', 'Plumbing'],
+    ['https://randomuser.me/api/portraits/med/women/75.jpg', 'Laundry'],
+    ['https://randomuser.me/api/portraits/med/women/75.jpg', 'Handyman'],
+    ['https://randomuser.me/api/portraits/med/men/75.jpg', 'Gardening'],
+    ['https://randomuser.me/api/portraits/med/men/75.jpg', 'Gardening'],
+    ['https://randomuser.me/api/portraits/med/women/75.jpg', 'Gardening'],
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xff17376B),
+        backgroundColor: Theme.of(context).colorScheme.primary,
         title: const Text(
           'My Profile',
           style: TextStyle(fontSize: 16, color: Colors.white),
@@ -34,20 +33,21 @@ class ProfilePage extends StatelessWidget {
         ),
       ),
       body: SizedBox(
-        height: 120, // Increased height to ensure the ListView is visible
+        height: 100,
+        width: double.infinity, // <-- HERE
         child: Scrollbar(
           // Added a scrollbar
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            itemCount: serviceCategory.length,
+            itemCount: 100,
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: ServiceTile(
-                  categoryImageUrl: serviceCategory[index][0],
-                  categoryName: serviceCategory[index][1],
-                  categoryImageRadius: 22,
+                child: Container(
+                  height: 40,
+                  width: 40,
+                  color: Colors.red,
                 ),
               );
             },

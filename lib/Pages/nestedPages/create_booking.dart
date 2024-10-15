@@ -14,7 +14,7 @@ class _CreateBookingState extends State<CreateBooking> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xff17376B),
+        backgroundColor: Theme.of(context).colorScheme.primary,
         title: const Text(
           'Create Booking',
           style: TextStyle(
@@ -24,6 +24,7 @@ class _CreateBookingState extends State<CreateBooking> {
         ),
         automaticallyImplyLeading: false,
         leading: IconButton(
+          padding: EdgeInsets.all(0),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -34,11 +35,11 @@ class _CreateBookingState extends State<CreateBooking> {
           ),
         ),
       ),
-      body: const SingleChildScrollView(
-        child: Column(
-          children: [],
-        ),
-      ),
+      // body: const SingleChildScrollView(
+      //   child: Column(
+      //     children: [],
+      //   ),
+      // ),
     );
   }
 }

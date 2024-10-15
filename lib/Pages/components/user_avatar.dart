@@ -14,10 +14,16 @@ class UserAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       backgroundImage: circleAvatarUrl != ''
-          ? NetworkImage(circleAvatarUrl!)
-          : const AssetImage('assets/avatar.png') as ImageProvider,
+          ? NetworkImage(circleAvatarUrl)
+          : Image.asset(
+              'assets/avatar.png',
+              fit: BoxFit.cover,
+            ) as ImageProvider,
       onBackgroundImageError: (_, __) {
-        const AssetImage('assets/avatar.png');
+        Image.asset(
+          'assets/avatar.png',
+          fit: BoxFit.cover,
+        );
       },
       radius: avatarRadius.toDouble(),
     );
