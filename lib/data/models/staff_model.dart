@@ -1,4 +1,5 @@
 class StaffModel {
+  String id;
   String circleAvatarUrl;
   String name;
   String service;
@@ -6,6 +7,7 @@ class StaffModel {
   double charge;
 
   StaffModel({
+    required this.id,
     required this.circleAvatarUrl,
     required this.name,
     required this.service,

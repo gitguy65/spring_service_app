@@ -10,7 +10,7 @@ class BookingsData {
 
   Future<List<BookingModel>> fetchBookings(
       String userId, int page, int take) async {
-    if (token == null || token.isEmpty) {
+    if (token.isEmpty) {
       throw Exception('User is not registerd or logged in');
     }
 
@@ -33,7 +33,10 @@ class BookingsData {
             endDate: DateTime.parse(booking['endDate']),
             bookedDate: DateTime.parse(booking['bookedDate']),
             status: booking['status'],
-            userId: '',
+            userId: booking['userId'],
+            isAccepted: booking['isAccepted'],
+            isPaymentConfirmed: booking['isPaymentConfirmed'],
+            charge: booking['charge'],
           );
         }).toList();
 
@@ -48,7 +51,7 @@ class BookingsData {
   }
 
   Future<bool> createBooking(BookingModel booking) async {
-    if (token == null || token.isEmpty) {
+    if (token.isEmpty) {
       throw Exception('User is not registerd or logged in');
     }
     try {
@@ -83,7 +86,7 @@ class BookingsData {
   }
 
   Future<bool> updateBooking(BookingModel booking, String bookingId) async {
-    if (token == null || token.isEmpty) {
+    if (token.isEmpty) {
       throw Exception('User is not registerd or logged in');
     }
     try {
@@ -118,7 +121,7 @@ class BookingsData {
   }
 
   Future<bool> deleteBooking(String bookingId) async {
-    if (token == null || token.isEmpty) {
+    if (token.isEmpty) {
       throw Exception('User is not registerd or logged in');
     }
     final response = await http.delete(

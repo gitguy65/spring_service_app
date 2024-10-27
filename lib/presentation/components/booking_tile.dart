@@ -84,13 +84,13 @@ class BookingTile extends StatelessWidget {
                   CircleAvatar(
                     backgroundColor: Colors.transparent,
                     child:
-                        bookingModel.status == BookingStatus.PENDING.toString()
+                        bookingModel.status == BookingStatus.pending.toString()
                             ? const Icon(
                                 Icons.timer,
                                 color: Colors.blue,
                               )
                             : bookingModel.status ==
-                                    BookingStatus.COMPLETED.toString()
+                                    BookingStatus.completed.toString()
                                 ? const Icon(
                                     Icons.check,
                                     color: Colors.green,

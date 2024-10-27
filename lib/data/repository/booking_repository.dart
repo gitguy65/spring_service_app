@@ -3,6 +3,7 @@ import 'package:spring_service/data/models/booking_model.dart';
 
 class BookingRepository {
   final BookingsData bookingsData;
+  // set the token
 
   BookingRepository(this.bookingsData);
 

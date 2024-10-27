@@ -1,5 +1,5 @@
 enum BookingStatus {
-  PENDING,
-  COMPLETED,
-  CANCELLED
+  pending,
+  completed,
+  cancelled,
 }

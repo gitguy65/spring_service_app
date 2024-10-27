@@ -1,7 +1,7 @@
 class CategoryModel {
-  String categoryImageUrl;
-  double categoryImageRadius;
-  String categoryName;
+  final String categoryImageUrl;
+  final double categoryImageRadius;
+  final String categoryName;
 
   CategoryModel({
     required this.categoryImageUrl,
