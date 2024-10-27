@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:spring_service/models/booking_model.dart';
-import 'package:spring_service/pages/components/booking_tile.dart';
-import 'package:spring_service/pages/nestedPages/create_booking.dart';
+import 'package:spring_service/presentation/models/booking_model.dart';
+import 'package:spring_service/presentation/components/booking_tile.dart';
+import 'package:spring_service/presentation/nestedPages/create_booking.dart';
 
 // ignore: must_be_immutable
 class BookingsPage extends StatelessWidget {

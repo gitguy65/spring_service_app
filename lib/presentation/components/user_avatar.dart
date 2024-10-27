@@ -16,12 +16,12 @@ class UserAvatar extends StatelessWidget {
       backgroundImage: circleAvatarUrl != ''
           ? NetworkImage(circleAvatarUrl)
           : Image.asset(
-              'assets/avatar.png',
+              'assets/images/avatar.png',
               fit: BoxFit.cover,
             ) as ImageProvider,
       onBackgroundImageError: (_, __) {
         Image.asset(
-          'assets/avatar.png',
+          'assets/images/avatar.png',
           fit: BoxFit.cover,
         );
       },

@@ -35,11 +35,20 @@ class _CreateBookingState extends State<CreateBooking> {
           ),
         ),
       ),
-      // body: const SingleChildScrollView(
-      //   child: Column(
-      //     children: [],
-      //   ),
-      // ),
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(top: 10),
+          child: Column(
+            children: [
+              // select cateogry
+              // enter description
+              // select your location
+              // enter offer
+              // submit
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

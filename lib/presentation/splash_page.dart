@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:spring_service/layouts/user_pages.dart';
+import 'package:spring_service/presentation/layouts/user_pages.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});

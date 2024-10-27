@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spring_service/Pages/components/user_avatar.dart';
-import 'package:spring_service/models/category_model.dart';
+import 'package:spring_service/presentation/components/user_avatar.dart';
+import 'package:spring_service/presentation/models/category_model.dart';
 
 class CategoryTile extends StatelessWidget {
   final CategoryModel categoryModel;

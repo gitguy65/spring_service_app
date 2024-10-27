@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:spring_service/pages/components/user_avatar.dart';
-import 'package:spring_service/pages/bookings_page.dart';
-import 'package:spring_service/pages/chat_page.dart';
-import 'package:spring_service/pages/home_page.dart';
-import 'package:spring_service/pages/profile_page.dart';
-import 'package:spring_service/pages/settings_page.dart';
+import 'package:spring_service/presentation/bookings_page.dart';
+import 'package:spring_service/presentation/chat_page.dart';
+import 'package:spring_service/presentation/components/user_avatar.dart';
+import 'package:spring_service/presentation/home_page.dart';
+import 'package:spring_service/presentation/profile_page.dart';
+import 'package:spring_service/presentation/settings_page.dart';
 
 class UserPages extends StatefulWidget {
   const UserPages({super.key});
@@ -71,12 +71,7 @@ class _UserPagesState extends State<UserPages> {
   @override
   void initState() {
     super.initState();
-    pages = [
-      HomePage(),
-      BookingsPage(),
-      const ChatPage(),
-      const SettingsPage()
-    ];
+    pages = [HomePage(), BookingsPage(), ChatPage(), SettingsPage()];
   }
 
   @override

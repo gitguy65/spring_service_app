@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spring_service/enums/booking_status.dart';
-import 'package:spring_service/models/booking_model.dart';
+import 'package:spring_service/constants/enums/booking_status.dart';
+import 'package:spring_service/presentation/models/booking_model.dart';
 
 class BookingTile extends StatelessWidget {
   final BookingModel bookingModel;
@@ -40,7 +40,7 @@ class BookingTile extends StatelessWidget {
                   fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) {
                     return Image.asset(
-                      'assets/avatar.png',
+                      'assets/images/avatar.png',
                       fit: BoxFit.cover,
                     );
                   },

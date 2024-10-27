@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spring_service/Pages/components/user_avatar.dart';
-import 'package:spring_service/models/staff_model.dart';
+import 'package:spring_service/presentation/components/user_avatar.dart';
+import 'package:spring_service/presentation/models/staff_model.dart';
 
 class StaffTile extends StatelessWidget {
   final StaffModel staffModel;

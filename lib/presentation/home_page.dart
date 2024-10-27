@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:spring_service/models/category_model.dart';
-import 'package:spring_service/models/staff_model.dart';
-import 'package:spring_service/pages/components/category_tile.dart';
-import 'package:spring_service/pages/nestedPages/create_booking.dart';
-import 'package:spring_service/pages/components/staff_tile.dart';
+import 'package:spring_service/presentation/components/category_tile.dart';
+import 'package:spring_service/presentation/components/staff_tile.dart';
+import 'package:spring_service/presentation/models/category_model.dart';
+import 'package:spring_service/presentation/models/staff_model.dart';
+import 'package:spring_service/presentation/nestedPages/create_booking.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
