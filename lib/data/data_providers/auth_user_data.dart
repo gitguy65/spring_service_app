@@ -6,7 +6,7 @@ import 'package:spring_service/data/models/app_user_model.dart';
 import 'package:spring_service/data/models/auth_response_model.dart';
 
 class AuthUserData {
-  Future<bool> register(AppUserModel user) async {
+  Future<String> register(AppUserModel user) async {
     try {
       final request = await http.post(
         Uri.parse('$baseUrl/register'),
@@ -20,10 +20,17 @@ class AuthUserData {
           },
         ),
       );
-      if (request.statusCode == 200) {
-        return true;
-      } else {
-        return false;
+
+      switch (request.statusCode) {
+        case 200:
+          return 'User successfully created';
+        case 401:
+          var response = json.decode(request.body);
+          return response;
+        case 403:
+          return 'User already exists';
+        default:
+          return 'Internal server error';
       }
     } catch (e) {
       throw Exception('Error : $e');

@@ -7,7 +7,7 @@ class AuthRepository {
 
   AuthRepository(this.auth);
 
-  Future<bool> register(AppUserModel user) async {
+  Future<String> register(AppUserModel user) async {
     final response = await auth.register(user);
     return response;
   }
